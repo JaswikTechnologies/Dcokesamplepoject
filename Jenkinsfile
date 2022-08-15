@@ -14,10 +14,10 @@ pipeline {
 
 
        stage('Build Docker Image') {
-        step{
+        steps {
 
-	     sh ' cp /var/lib/jenkins/workspace/Jenkins-Pipeline/Dcokesamplepoject/* /var/lib/jenkins/workspace/Jenkins-Pipeline'
-		 sh 'docker build -t jaswiktechnologiesdocker/nginx:v1 .'   
+	     sh 'cp /var/lib/jenkins/workspace/Jenkins-Pipeline/Dcokesamplepoject/* /var/lib/jenkins/workspace/Jenkins-Pipeline'
+	     sh 'docker build -t jaswiktechnologiesdocker/nginx:v1 .'   
 
         }  
 	}
