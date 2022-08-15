@@ -3,8 +3,13 @@ pipeline {
     stages {
         stage("git clone")
         {
-            sh 'rm -rf Dcokesamplepoject*'
-            sh 'git clone https://github.com/JaswikTechnologies/Dcokesamplepoject.git'
+            steps{
+
+                sh 'rm -rf Dcokesamplepoject*'
+                sh 'git clone https://github.com/JaswikTechnologies/Dcokesamplepoject.git'
+
+            }
+            
         }
         stage("QED")
         {
