@@ -17,7 +17,7 @@ pipeline {
         steps {
 
 	     sh 'cp -r /var/lib/jenkins/workspace/Jenkins-Pipeline/Dcokesamplepoject/* /var/lib/jenkins/workspace/Jenkins-Pipeline'
-	     sh 'docker build -t jaswiktechnologiesdocker/nginx:v1 .'   
+	     sh 'docker build -t jaswiktechnologiesdocker/nginx:1 .'   
 
         }  
 	}
