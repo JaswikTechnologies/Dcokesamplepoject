@@ -24,14 +24,14 @@ pipeline {
 
 	stage('Push Image to Docker Hub') {
         steps {
-            sh	'docker push jaswiktechnologiesdocker/nginx:v1'
+            sh	'docker push jaswiktechnologiesdocker/nginx:1'
 
         }
 	}
 
 	stage('Deploy to Docker Host') {
         steps {
-            sh	'docker -H tcp://10.1.1.250:2375 run --rm -dit --name webapp1 --hostname webapp1 -p 9000:80 --network ansible_nw jaswiktechnologiesdocker/nginx:v1'
+            sh	'docker -H tcp://10.1.1.250:2375 run --rm -dit --name webapp1 --hostname webapp1 -p 9000:80 --network ansible_nw jaswiktechnologiesdocker/nginx:1'
 
         }
 	}
