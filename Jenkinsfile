@@ -1,12 +1,10 @@
 pipeline {
     agent any
     stages {
-        stage("build")
+        stage("git clone")
         {
-            steps {
-                echo "-----------------------"
-                echo "builddddd"
-            }
+            sh 'rm -rf Dcokesamplepoject*'
+            sh 'git clone https://github.com/JaswikTechnologies/Dcokesamplepoject.git'
         }
         stage("QED")
         {
